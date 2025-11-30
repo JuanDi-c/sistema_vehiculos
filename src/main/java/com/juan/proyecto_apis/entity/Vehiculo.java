@@ -32,7 +32,7 @@ public class Vehiculo {
     @Column(name = "vehicolo_color",nullable = false)
     private String vehiculoColor;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "conductor_id", referencedColumnName = "conductor_id",nullable = false)
     private Conductor conductor;
 

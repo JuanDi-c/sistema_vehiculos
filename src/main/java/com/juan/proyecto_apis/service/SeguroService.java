@@ -1,8 +1,11 @@
 package com.juan.proyecto_apis.service;
 
 import com.juan.proyecto_apis.entity.Seguro;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+
 
 public interface SeguroService {
     List<Seguro> listSeguros();//mostrar

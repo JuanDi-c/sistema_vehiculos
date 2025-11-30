@@ -5,9 +5,11 @@ import com.juan.proyecto_apis.repository.SeguroRepository;
 import com.juan.proyecto_apis.service.SeguroService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class SeguroImpl implements SeguroService {
 
     @Autowired

@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/api/conductores")
 public class ConductorController {
 
     @Autowired
     private ConductorService conductorService;
+
 
     @GetMapping("/list")
     public ResponseEntity<List<Conductor>> listConductor(){

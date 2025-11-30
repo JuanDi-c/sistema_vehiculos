@@ -13,9 +13,8 @@ public class Seguro {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "seguro_id")
-    private Long idSeguro;
+    private String idSeguro;
 
     @ManyToOne
     @JoinColumn(name = "vehiculo_id", referencedColumnName = "vehiculo_id",nullable = false)
