@@ -32,4 +32,5 @@ public class Conductor {
     @Enumerated(EnumType.STRING)
     @Column(name= "disp_conductor", nullable = false)
     private ConductorState conductorState;
+
 }

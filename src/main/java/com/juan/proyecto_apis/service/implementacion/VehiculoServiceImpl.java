@@ -1,6 +1,8 @@
 package com.juan.proyecto_apis.service.implementacion;
 
+import com.juan.proyecto_apis.entity.Conductor;
 import com.juan.proyecto_apis.entity.Vehiculo;
+import com.juan.proyecto_apis.repository.ConductorRepository;
 import com.juan.proyecto_apis.repository.VehiculoRepository;
 import com.juan.proyecto_apis.service.VehiculoService;
 import lombok.SneakyThrows;
@@ -15,13 +17,18 @@ public class VehiculoServiceImpl implements VehiculoService {
     @Autowired
     private VehiculoRepository vehiculoRepository;
 
+    @Autowired
+    private ConductorRepository conductorRepository;
+
     @Override
     public List<Vehiculo> ListVehiculos() {
         return vehiculoRepository.findAll();
     }
 
+    @SneakyThrows
     @Override
     public Vehiculo registerVehiculo(Vehiculo vehiculo) {
+
         return vehiculoRepository.save(vehiculo);
     }
 
