@@ -26,10 +26,10 @@ public class Vehiculo {
     @Column(name = "vehiculo_modelo",nullable = false)
     private String vehiculoModelo;
 
-    @Column(name = "vehiculo_año",nullable = false)
+    @Column(name = "vehiculo_ano",nullable = false)
     private Integer vehiculoAno;
 
-    @Column(name = "vehicolo_color",nullable = false)
+    @Column(name = "vehiculo_color",nullable = false)
     private String vehiculoColor;
 
     @OneToOne(fetch = FetchType.EAGER)
