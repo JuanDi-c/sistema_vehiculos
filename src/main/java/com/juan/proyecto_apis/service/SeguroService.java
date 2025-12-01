@@ -1,6 +1,7 @@
 package com.juan.proyecto_apis.service;
 
 import com.juan.proyecto_apis.entity.Seguro;
+import com.juan.proyecto_apis.entity.Vehiculo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,4 +17,5 @@ public interface SeguroService {
 
     void deleteSeguro(String idSeguro);
 
+    List<Seguro> getSegurosByvehiculoId(Vehiculo vehiculo);
 }

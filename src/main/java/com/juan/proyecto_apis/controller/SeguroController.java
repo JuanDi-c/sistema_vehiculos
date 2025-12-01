@@ -1,6 +1,7 @@
 package com.juan.proyecto_apis.controller;
 
 import com.juan.proyecto_apis.entity.Seguro;
+import com.juan.proyecto_apis.entity.Vehiculo;
 import com.juan.proyecto_apis.service.SeguroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -53,6 +54,12 @@ public class SeguroController {
         }catch (Exception exception){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(exception.getMessage());
         }
+    }
+
+    @GetMapping("/search/by/vehiculo/{vehiculo}")
+    public ResponseEntity<List<Seguro>> searchSegurosByvehiculoId(@PathVariable Vehiculo vehiculo) {
+        List<Seguro> seguros = seguroService.getSegurosByvehiculoId(vehiculo);
+        return ResponseEntity.ok(seguros);
     }
 
 }

@@ -1,6 +1,7 @@
 package com.juan.proyecto_apis.service.implementacion;
 
 import com.juan.proyecto_apis.entity.Seguro;
+import com.juan.proyecto_apis.entity.Vehiculo;
 import com.juan.proyecto_apis.repository.SeguroRepository;
 import com.juan.proyecto_apis.service.SeguroService;
 import lombok.SneakyThrows;
@@ -49,5 +50,12 @@ public class SeguroImpl implements SeguroService {
 
         seguroRepository.deleteById(idSeguro);
     }
+
+    @Override
+    public List<Seguro> getSegurosByvehiculoId(Vehiculo vehiculo) {
+        return seguroRepository.findByVehiculo(vehiculo);
+    }
+
+
 }
 
